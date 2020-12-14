@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - projectYinxiaTaoV14Final</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <title>National park Lookup</title>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=?"></script>
+  <script type="text/javascript" src="javascripts/jquery.googlemap.js"></script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=translator"></script>
+</head>
+<body>
+  
+    <p>Select a language:</p>
+    <div id="languagesElement"></div>
+    <script type="text/javascript">
+    function translator() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'languagesElement');
+       }
+    </script>
+     <br>
+     <br>
+     <div id="userInput"> 
+     
+        <input type="radio" name="searchWay" value ="parkName"> search by park name          <br/> <br>
+        <input type="radio" name="searchWay" value ="stateName"> search by state                <br/> <br>
+        <button id="confirmWay" >confirm</button> <br/>
+        <div> <ul id="list"></ul><br/>   </div>
+       
+         Which park to visit?
+        <input type="text" list="parks" id="park" name="park">
+        <datalist id="parks">
+           <div id="parkChoices">      
+           </div>   
+        </datalist>
+    
+        <button id="confirm"  disabled > confirm </button>
+  </div>
+  <br/>
+  <div id="searchStates"> 
+     Which state to visit?
+     <input type="text" list="states" id="state" name="state">
+        <datalist id="states">
+           <div id="stateChoices">      
+           </div>   
+       </datalist>
+     <button id="confirmState"  disabled   > confirm </button>
+    <div id= "stateParks"> </div>
+    <button id="confirmPark"  disabled > confirm park</button>
+    
+  </div>
+ <br>
+  
+  
+  <div id= "info" >
+   
+    <button id="search"  disabled > search for information </button>
+    <button id="checkmap"  disabled>check map</button>
+    <button id="checkactivities" disabled>check activities</button>
+    <button id="checkWeather"  disabled > check Weather </button>
+    <button id= "checkHours" disabled> check operating hours </button>
+    <button id= "add" disabled> add to your list </button>
+   
+    <div id="describe"></div>
+    <ul id= "activities"> </ul>
+    <div id="weather"></div>      
+    <div id="hours"</div>  
+  
+  </div>
+ 
+    <br>
+    <br>
+   <div id="photo">  </div>
+   <div id="map" style="width: 800px; height: 600px;"> </div>    
+   
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5.1/jquery.googlemap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
